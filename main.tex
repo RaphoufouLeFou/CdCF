@@ -1,0 +1,133 @@
+
+\documentclass[
+	12pt,				    
+	openright,			   
+	oneside,			    
+	a4paper,			    
+    chapter=TITLE,        
+    sumario=tradicional,   
+	english,			  
+	brazil,				   
+	]{abntex2}             
+ 
+
+\usepackage{newtxtext,newtxmath}
+\usepackage[T1]{fontenc}		
+\usepackage[utf8]{inputenc}		
+\usepackage{indentfirst}		
+\usepackage{graphicx}			
+\usepackage{booktabs}          
+
+\usepackage[alf,abnt-etal-text=it,abnt-emphasize=bf]{abntex2cite}	
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage[portuguese,onelanguage,ruled,vlined]{algorithm2e}
+\usepackage{ragged2e}
+\usepackage{makecell}
+
+\usepackage{caption}
+\usepackage{etoolbox}
+\captionsetup{
+    justification = centering,
+    singlelinecheck = false,
+    labelsep = endash,
+    font = bf, 
+}
+
+\usepackage{hyperref}
+
+\floatstyle{plaintop}
+\newfloat{mapa}{h!btp}{mapa}\floatname{mapa}{Mapa}
+\newcommand{\mapaautorefname}{Mapa}
+\newfloat{diagrama}{h!btp}{diagrama}\floatname{diagrama}{Diagrama}
+\newcommand{\diagramaautorefname}{Diagrama}
+\newfloat{fluxograma}{h!btp}{fluxograma}\floatname{fluxograma}{Fluxograma}
+\newcommand{\fluxogramaautorefname}{Fluxograma}
+\newfloat{figura}{h!btp}{figura}\floatname{figura}{Figura}
+\newcommand{\figuraautorefname}{Figura}
+\newfloat{quadro}{h!btp}{quadro}\floatname{quadro}{Quadro}
+\newcommand{\quadroautorefname}{Quadro}
+\newfloat{grafico}{h!btp}{grafico}\floatname{grafico}{Gráfico}
+\newcommand{\graficoautorefname}{Gráfico}
+\newfloat{tabela}{h!btp}{tabela}\floatname{tabela}{Tabela}
+\newcommand{\tabelaautorefname}{Tabela}
+
+\newenvironment{citacaodireta}{
+\vspace*{8mm} \setlength{\parindent}{0cm}
+\hfill \begin{minipage}{140mm}
+}{
+\vspace*{8mm} \end{minipage}
+}
+
+
+\counterwithout{equation}{chapter}
+
+
+\renewcommand*{\chapnumfont}{\normalfont\bfseries\sffamily}
+\renewcommand*{\chaptitlefont}{\normalfont\bfseries\sffamily}
+
+\setsecheadstyle{\normalfont\bfseries\sffamily\upcase}
+\setsubsecheadstyle{\normalfont\bfseries\sffamily\upcase}
+\setsubsubsecheadstyle{\normalfont\bfseries\sffamily\upcase}
+\setlength{\afterchapskip}{0.5cm}
+\setlength{\aftersecskip}{0.5cm}
+
+\setlrmarginsandblock{2,5cm}{2,5cm}{*}
+\setulmarginsandblock{2,5cm}{2,5cm}{*}
+\checkandfixthelayout
+
+\setlength{\parindent}{0.75cm}
+
+\setlength{\parskip}{0.2cm} 
+
+\hypersetup{
+        % metadonées
+		pdftitle={Relatório de práticas},
+		pdfauthor={IFPE},
+	    pdfcreator={LaTeX with abnTeX2},
+		colorlinks=true,  
+    	linkcolor=black,    
+    	citecolor=black,   
+    	filecolor=magenta,
+		urlcolor=black,     
+		bookmarksdepth=4   
+}
+\begin{document}
+
+\frenchspacing
+\pagenumbering{gobble}
+
+\pretextual
+
+\input{sections/title.tex} 
+
+\input{sections/0-Table} 
+
+\gdef\clearforchapter{}
+
+\input{sections/1-intro} \\
+
+\input{sections/2-Origine} 
+
+\input{sections/3-Objet} \\
+
+\input{sections/4-Etat} \\
+
+\input{sections/5-entreprise} 
+
+\input{sections/6-equipe} 
+
+\input{sections/7-Repartition} 
+
+\input{sections/8-planification} 
+
+\input{sections/9-CdCT}
+
+\input{sections/10-Conclusion}
+
+\input{sections/ref}
+
+\cleardoublepage
+
+\end{document}

@@ -1,0 +1,53 @@
+\chapter{Introduction}
+\label{chapter:introduction}
+A introdução é a parte inicial do texto, que contém a delimitação do assunto tratado e outros elementos necessários para apresentar o tema do relatório. É importante deixar claro na introdução as normas utilizadas para as práticas.
+
+Todo texto que for utilizado na introdução que vier de alguma obra tais como: normas, livros, artigos e notas de aula, devem ser citadas no texto e registrado na referência bibliográfica.
+
+Os arquivos ``\textit{main.tex}'' e ``\textit{referencias.tex}''não deve ser alterado, EXCETO se souber o que está fazendo. Quanto aos outros arquivos, há seções e avisos indicando o que pode ou não ser modificado.
+
+Sobre parágrafos... Para dividir seu texto em parágrafos, basta apertar a tecla ``Enter'' duas vezes seguidas.
+
+Exemplo de parágrafo.
+
+Exemplo de parágrafo.
+
+Exemplo de parágrafo.
+
+Sobre os comandos... Vou descrevê-los aqui da forma mais sucinta possível. Ah, caso eu esqueça de falar, sempre lembre de colocar chaves ``\{ \}'' após os comandos. Aproveito pra dizer que é dentro dessas chaves que você vai inserir o que deseja (vai ficar mais claro assim que as explicações começarem, ou pelo menos assim penso).
+
+Para textos em negrito, utilize o comando ``$\backslash$textbf\{\}'' colocando entre as chaves o que deseja destacar em negrito. \textbf{Exemplo de como fica um texto em negrito.}
+
+Para textos em itálicos, utilize o comando ``$\backslash$textit\{\}'' colocando entre as chaves o que deseja destacar em itálico. \textit{Exemplo de como fica um texto em itálico.}
+
+Para sublinhar textos, utilize o comando ``$\backslash$underline\{\}'' colocando entre as chaves o que deseja destacar. \underline{Exemplo de como fica um texto sublinhado.}
+
+Vale destacar que você pode utilizar mais de um tipo de destaque de texto. Para isso, basta utilizar um comando dentro do outro.
+
+\textbf{\textit{Exemplo de como fica um texto em negrito e itálico.}}
+
+\textbf{\underline{Exemplo de como fica um texto em negrito e sublinhado.}}
+
+\textit{\underline{Exemplo de como fica um texto em itálico e sublinhado.}}
+
+\textbf{\textit{\underline{Exemplo de como fica um texto em negrito, itálico e sublinhado.}}}
+
+Sobre citações... Primeiramente sugiro que dê uma olhada no arquivo ``\textit{referencias.bib}'' para que possa ver como inserir os dados bibliográficos das referências que vai utilizar e depois volte para esse trecho do texto.
+
+Agora que já viu o arquivo mencionado no parágrafo anterior (ou pelo menos assim espero), deve ter observado que logo após o tipo de registro de bibliografia (article, misc, etc\ldots) tem um nome, tipo: ``\textit{@article\{\underline{GUEYMARD1993}}\ldots''. Esse trecho que está sublinhado é a ``\textit{label}'' da nossa citação. É a forma como podemos resgatar as informações dela sem ter que ficar digitando tudo manualmente.
+
+Para colocar citações no início de frase, utilize o comando ``$\backslash$citeonline\{\}'' e dentro das chaves coloque a label da citação. Exemplo: \citeonline{GUEYMARD1993} exemplo exemplo exemplo exemplo exemplo, exemplo exemplo exemplo exemplo exemplo.
+
+Para colocar citações no final de frase, utilize ``$\backslash$cite\{\}'' e dentro das chaves coloque a label da citação. Exemplo: Exemplo  exemplo exemplo exemplo exemplo exemplo, exemplo exemplo exemplo exemplo  exemplo \cite{HOVE2013}.
+
+Citações diretas com menos de 3 linhas devem ser utilizadas aspas. Aliás, para colocar aspas, primeiro se coloca duas crases e, em seguida, duas aspas simples. Exemplo: Segundo \citeonline[p.2]{GUEYMARD1993}, ``Exemplo de citação com menos de três linhas. Exemplo de citação com menos de três linhas. Exemplo de citação com menos de três linhas.''.
+
+Citações com mais de 3 linhas podem seguir o exemplo abaixo, que utiliza o ambiente ``$\backslash$citacao\{\}'':
+
+\begin{citacao}
+Exemplo de citação com mais de três linhas. Exemplo de citação com mais de três linhas. Exemplo de citação com mais de três linhas. Exemplo de citação com mais de três linhas. Exemplo de citação com mais de três linhas. Exemplo de citação com mais de três linhas. Exemplo de citação com mais de três linhas. \cite[p.2]{HOVE2013}
+\end{citacao}
+
+Observem que nas duas citações diretas acima consta o número da página que o trecho foi retirado. Para fazer isso, basta digitar ``[ ]'' antes da label da citação e dentro dos colchetes informar a página de onde o trecho foi extraído.
+
+Para mais alguns comandos podem acessar a página ``\textit{Learn}'' do Overleaf clicando \href{https://pt.overleaf.com/learn}{\underline{\textit{\textbf{aqui}}}}. Nessa página tem todos os detalhes que irei colocar aqui, assim como muitos outros que não serão descritos nesse documento.
